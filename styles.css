@@ -337,3 +337,53 @@ summary {
     flex-direction: column;
   }
 }
+
+@media (max-width: 400px) {
+  .about-me-heading {
+    font-size: 5vh;
+  }
+
+  .about-me p {
+    text-align: start;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+  }
+
+  .card-internal-block ul {
+    padding: 0;
+  }
+
+  .card-internal-block li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-bar-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .project-bar-description button {
+    font-size: 2vh;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+  }
+
+  .contanct-heading {
+    font-size: 15vh;
+    align-self: center;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
