@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --first-bg: rgb(25, 25, 25);
+  --second-bg: rgb(43, 43, 43);
+  --section-bg: rgb(43, 43, 43);
+  --text-color: rgb(225, 225, 225);
+  --brighter-text-color: white;
+  --accent-color: cornflowerblue;
+  --darker-accent-color: rgb(48, 113, 234);
+
+  --project-transition: 300ms ease-in-out;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  min-height: 40em;
+  display: flex;
+  flex-grow: 1;
+}
+
+section:nth-child(even) {
+  background-color: var(--first-bg);
+}
+
+section:nth-child(odd) {
+  background-color: var(--second-bg);
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* About Div  */
+
+.about {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about img {
+  height: 40vh;
+  max-height: 40rem;
+  border: 0.5rem var(--accent-color) solid;
+  box-shadow: 0 0 1.5rem var(--accent-color);
+
+  border-radius: 50%;
+
+  transition: var(--project-transition);
+}
+
+.about img:hover {
+  border-color: var(--darker-accent-color);
+  box-shadow: 0 0 3rem var(--darker-accent-color);
+}
+
+.about-me {
+  width: 40em;
+  margin-bottom: 5rem;
+
+  max-width: 60%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  font-size: 1.2rem;
+}
+
+.about-me a {
+  text-decoration: none;
+}
+
+.about-me-btn {
+  font-size: 1.5rem;
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+
+  text-transform: uppercase;
+
+  border-radius: 5em;
+
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+
+  cursor: pointer;
+  transition: var(--project-transition);
+}
+
+.about-me-btn:hover {
+  background-color: var(--darker-accent-color);
+  color: var(--brighter-text-color);
+}
+
+/* SKills Div  */
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.card {
+  width: 40em;
+  margin: 2em;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--second-bg);
+  border-radius: 1em;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  align-self: center;
+}
+
+.card-internal-block {
+  margin: 1em 2em;
+  margin-top: -0.5em;
+  background-color: var(--first-bg);
+}
+
+.card-internal-block ul {
+  list-style-type: none;
+}
+
+.card-internal-block li {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-internal-block ul li progress {
+  accent-color: var(--accent-color);
+}
+
+/* Projects Div   */
+
+.projects {
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0rem;
+}
+
+.projects-container {
+  margin-top: 2rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+
+.project-bar {
+  width: 70%;
+
+  background-color: var(--first-bg);
+}
+
+.project-bar-heading {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  border-radius: 5rem;
+}
+
+.project-bar-heading h3 {
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.project-bar-heading span {
+  font-size: 3rem;
+  min-width: 1.5em;
+  min-width: 1.5em;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  transition: var(--project-transition);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-bar-heading:hover span {
+  color: var(--brighter-text-color);
+  background-color: var(--darker-accent-color);
+}
+
+.project-bar-description {
+  padding: 2em;
+  padding-top: 0;
+}
+
+.project-bar-description a {
+  text-decoration: none;
+}
+
+.project-bar-description button {
+  font-size: 1.5rem;
+  margin-top: 1em;
+  padding: 0.5em 1.5em;
+
+  text-transform: uppercase;
+
+  border-radius: 5em;
+
+  font-weight: 700;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+
+  cursor: pointer;
+  transition: var(--project-transition);
+}
+
+.project-bar-description button:hover {
+  background-color: var(--darker-accent-color);
+  color: var(--brighter-text-color);
+}
+
+/* Contacts Div   */
+
+.contacts {
+  padding: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.contanct-heading {
+  font-size: 20rem;
+  margin: 0;
+  padding: 0;
+}
+.contact-links {
+  flex-grow: 1;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
+}
+.link-item {
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-item h2 {
+  margin-bottom: 0.5rem;
+}
+
+.link-item a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.link-item a:hover {
+  color: var(--darker-accent-color);
+}
+
+@media (max-width: 953px) {
+  .about img {
+    display: none;
+  }
+
+  .about-me {
+    margin-bottom: 5vh;
+  }
+
+  .about-me-heading {
+    font-size: 10vh;
+    margin-bottom: 0;
+  }
+
+  .about-me p {
+    text-align: center;
+  }
+
+  .cards-container {
+    flex-wrap: wrap;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+  }
+
+  .contanct-heading {
+    font-size: 15vh;
+    align-self: center;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
